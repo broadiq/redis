@@ -1,4 +1,4 @@
-FROM redis:5.0
+FROM redis:5.0.5
 MAINTAINER John S. Lutz <jlutz@broadiq.com>
 
 # Update the base image.
