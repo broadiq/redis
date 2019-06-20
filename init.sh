@@ -47,7 +47,8 @@ if ([ ! -f /.redis_configured ]); then
         then
             sed -i "s/${conf[0]}.*/${conf[0]} ${conf[1]}/g" /usr/local/etc/redis/redis.conf
         else
-            echo ${conf[0]} " " ${conf[1]}  >> /usr/local/etc/redis/redis.conf
+            #echo ${conf[0]} " " ${conf[1]}  >> /usr/local/etc/redis/redis.conf
+            echo "Do nothing..."
         fi
     done
 
