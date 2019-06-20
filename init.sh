@@ -17,14 +17,14 @@ if ([ ! -f /.redis_configured ]); then
         _word=$( [ ${REDIS_PASS} ] && echo "preset" || echo "random" )
         echo "=> Securing redis with a ${_word} password"
         echo "requirepass $PASS" >> /usr/local/etc/redis/redis.conf
-        echo "=> Done!"
-        echo "========================================================================"
-        echo "You can now connect to this Redis server using:"
-        echo ""
-        echo "    redis-cli -a $PASS -h <host> -p <port>"
-        echo ""
-        echo "Please remember to change the above password as soon as possible!"
-        echo "========================================================================"
+        #echo "=> Done!"
+        #echo "========================================================================"
+        #echo "You can now connect to this Redis server using:"
+        #echo ""
+        #echo "    redis-cli -a $PASS -h <host> -p <port>"
+        #echo ""
+        #echo "Please remember to change the above password as soon as possible!"
+        #echo "========================================================================"
     fi
 
     unset REDIS_PASS
@@ -48,7 +48,7 @@ if ([ ! -f /.redis_configured ]); then
             sed -i "s/${conf[0]}.*/${conf[0]} ${conf[1]}/g" /usr/local/etc/redis/redis.conf
         else
             #echo ${conf[0]} " " ${conf[1]}  >> /usr/local/etc/redis/redis.conf
-            echo "Do nothing..."
+            echo " "
         fi
     done
 
